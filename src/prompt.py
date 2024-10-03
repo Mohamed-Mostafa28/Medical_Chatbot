@@ -69,6 +69,12 @@ All_QuestionsWithAllDataWithoutCommentsNewTemplte = f"""
     The questions you need to ask, in order, are:
 
     1. {Question6}
+    1. {Question6}
+    1. {Question6}
+    1. {Question6}
+    1. {Question6}
+    1. {Question6}
+
 
  
 
