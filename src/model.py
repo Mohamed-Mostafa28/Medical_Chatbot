@@ -4,7 +4,7 @@ import os
 
 
 # Set your Groq API key
-api=os.getenv("Groq_API_key")
+api="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"
 # Load model
 LLM_Model = ChatGroq(
                     model="llama-3.1-70b-versatile",
