@@ -1,11 +1,11 @@
 import streamlit as st
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from model import LLM_Model  # Custom model, replace with your logic
 from Create_Messages import CreateHumanMessage, CreateAIMessage, CreateSystemMessage
 from prompt import All_QuestionsWithAllDataWithoutCommentsNewTemplte
 
 # Load environment variables (if necessary)
-load_dotenv()
+# load_dotenv()
 
 # Set up the UI
 st.set_page_config(page_title="Medical Chatbot", page_icon="🤖")

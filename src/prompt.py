@@ -110,6 +110,7 @@ All_QuestionsWithAllDataWithoutCommentsNewTemplte = f"""
 
 
     The questions you need to ask, in order, are:
+<<<<<<< HEAD
      Note: In all questions, ensure that my age, years provided, and past answers are mathematically consistent and logically sound.
     1. {Question1}
     2. {Question2}
@@ -118,6 +119,16 @@ All_QuestionsWithAllDataWithoutCommentsNewTemplte = f"""
     5. {Question5}
     6. {Question6}
     7. {Question7}
+=======
+
+    1. {Question1}
+    1. {Question2}
+    1. {Question3}
+    1. {Question4}
+    1. {Question5}
+    1. {Question6}
+>>>>>>> 7b0c95625744b130e74302d5dd02f223cb2b5051
+
 
  
 

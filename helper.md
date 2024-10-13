@@ -2,7 +2,7 @@
 source chatbot_env/Scripts/activate
 ------------------------------------------
 <!-- run streamlit file -->
-streamlit run src/app.py
+streamlit run src/app2.py
 ------------------------------------------
 ##########################################
 ##########################################
