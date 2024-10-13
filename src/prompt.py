@@ -1,12 +1,28 @@
+# Question1 = """
+#     Smoking Habits: 'Do you currently smoke? if no ask me have you smoked in the past? 
+#     - If you currently smoke: How many packs per day do you smoke?
+#         how long have you been smoking? 
+#     - If you’ve stopped smoking: 
+#         How many packs per day did you smoke?
+#         how long did you smoke?
+#         and how many years ago did you quit? 
+# """
+
+
 Question1 = """
-    Smoking Habits: 'Do you currently smoke? if no ask me have you smoked in the past? 
-    - If you currently smoke: How many packs per day do you smoke?
-        how long have you been smoking? 
-    - If you’ve stopped smoking: 
-        How many packs per day did you smoke?
-        how long did you smoke?
-        and how many years ago did you quit? 
+    Smoking Habits: 'Do you currently smoke?' 
+    - If no, ask: 'Have you smoked in the past?' 
+        - If yes: 
+            'How many packs per day did you smoke?' 
+            'How long did you smoke in total (in years)?' 
+            'How many years ago did you quit?' 
+        - Validate: Ensure the total years of smoking plus the number of years since quitting is less than or equal to my age if not restart from the begin.
+    - If yes: 
+        'How many packs per day do you smoke?' 
+        'How long have you been smoking (in years)?' 
+        - Validate: Ensure the years of smoking are logically consistent with my age if not restart from the begin.
 """
+
 
 # Question2 = """
 #     Drinking Habits: 'Do you currently drink alcohol? 
@@ -14,6 +30,7 @@ Question1 = """
 # """
 
 Question2 = """
+    In this question don't ask about past
     Drinking Habits: 'Do you currently drink alcohol? 
     - If you currently drink: How often do you drink (e.g., daily, weekly, occasionally)?
     how many servings of alcohol do you typically consume in one sitting ? 
@@ -21,7 +38,9 @@ Question2 = """
 
 Question3 = """
     Recreational Drug Use: 'Do you currently use any recreational drugs? 
-    - If you currently use: What substances do you use, how frequently (e.g., daily, weekly, occasionally), and for how long have you been using them? 
+    - If you currently use: 'What substances do you use like (e.g., marijuana, cocaine, ecstasy) or something else?'
+    - 'how frequently (e.g., daily, weekly, occasionally)?'
+    - 'for how long have you been using them?'
 """
 
 Question4 = """
@@ -40,20 +59,44 @@ Question6 = """
 Recreational Activity History:
    
 - **Current Activities**: Do you currently engage in any recreational activities or sports? 
-   - If yes, what activities do you participate in
-   - how often do you participate each week?
+   - If yes, 'what activities do you participate in?'
+   - 'how often do you participate each week?'
     
 - **Stopped Activities**: Have you stopped doing any activities or sports you used to enjoy? 
-   - If yes, which ones 
-   - why did you stop?
+   - If yes, 'which ones?' 
+   - 'why did you stop?'
     
 - **Past Activities**: Have you played any sports or participated in any physical activities in the past that you no longer do?
     - If yes, which ones 
     
 - **Injuries or Pain**: Have you experienced any injuries or pain while doing activities?
-    - If so, what kind of injury or pain,
-    - if so, how did it affect your participation?
+    - If so, 'what kind of injury or pain?'
+    - if so, 'how did it affect your participation?'
 """
+
+Question7 = """
+Occupation History:
+   
+    Current Occupation:
+    Are you currently employed?
+        - If yes, what is your current job title?
+    
+    Retirement Status:
+    ask my these questions if my age >= 60?
+        if yes, Have you retired from work?
+       - If yes, when did you retire?        
+       - What was the title of your last job before retirement?
+        
+    Past Occupations:
+    ask me about if i have any previous jobs? 
+       - if yes, Can you provide details about your previous jobs like What was your job title in each position?
+       - How long did you work in each role?
+"""
+
+
+
+
+
 
 All_QuestionsWithAllDataWithoutCommentsNewTemplte = f"""
  
@@ -67,13 +110,19 @@ All_QuestionsWithAllDataWithoutCommentsNewTemplte = f"""
 
 
     The questions you need to ask, in order, are:
-
-    1. {Question6}
+     Note: In all questions, ensure that my age, years provided, and past answers are mathematically consistent and logically sound.
+    1. {Question1}
+    2. {Question2}
+    3. {Question3}
+    4. {Question4}
+    5. {Question5}
+    6. {Question6}
+    7. {Question7}
 
  
 
 
-    Once all the questions are answered and  you get all information, politely thank me and close the conversation.
+    Once all the questions are answered and  you get all information, politely thank me and close the conversation and don't say any thing
 """
 
 
